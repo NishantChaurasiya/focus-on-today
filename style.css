@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+body{
+    background-color: rgb(242,249,237);
+}
+.title{
+    text-align: center;
+    color:rgb(72,163,0);
+}
+.title span{
+    color: rgb(97,72,28);
+}
