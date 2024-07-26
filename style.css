@@ -7,6 +7,7 @@
 body{
     background-color: #F2F9ED ;
     padding-inline:1rem;
+    margin-bottom: 2rem;
 
 }
 .title{
@@ -36,7 +37,7 @@ body{
 }
 .para{
     color: #858585 ;
-    size: 10px;
+    font-size: 12px;
 }
 .progress-bar{
     height: 30px;
@@ -53,7 +54,7 @@ body{
 }
 .error{
     color: red;
-    size: 10px;
+    font-size: 12px;
     margin-block:0.5rem;
 }
 .error-hide{
