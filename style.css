@@ -5,12 +5,64 @@
     font-family: Poppins;
 }
 body{
-    background-color: rgb(242,249,237);
+    background-color: #F2F9ED ;
+    padding-inline:1rem;
+
 }
 .title{
     text-align: center;
     color:rgb(72,163,0);
+    margin-block: 1rem;
 }
 .title span{
-    color: rgb(97,72,28);
+    color:rgb(97,72,28);
+}
+.app-container{
+    background-color:#FBFBFB ;
+    margin-inline: auto;
+    padding: 2rem;
+    max-width: 650px;
+    box-shadow:1px -1px 3px 0px black;;
+
+}
+.sub-title{
+    display: flex;
+    margin-bottom: 0.5rem;
+
+}
+.sun-icon{
+    margin-top: -5px;
+    padding-inline:0.5rem;
+}
+.para{
+    color: #858585 ;
+    size: 12px;
+}
+.error{
+    color: red;
+    size: 12px;
+    margin-block: 0.5rem;
+}
+.task-container{
+    background-color: white;
+    display: flex;
+    margin-block: 1rem;
+    padding: 2rem;
+    align-items: center;
+    border: 1px solid  #858585;
+    border-radius: 14px;
+}
+#task{
+    border: none;
+    padding-left: 1rem;
+}
+.footer-para{
+    text-align: center;
+    font-weight: 700;
+    margin-top: 2rem;
+}
+.creator-name{
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 10px;
 }
