@@ -36,7 +36,7 @@ body{
 }
 .para{
     color: #858585 ;
-    size: 12px;
+    size: 10px;
 }
 .progress-bar{
     height: 30px;
@@ -45,7 +45,7 @@ body{
     border-radius: 14px;
 }
 .progress-value{
-    /* width: 30%; */
+    width:0%;
     height: 30px;
     background-color:#48A300 ;
     margin-block:0.5rem;
@@ -53,8 +53,11 @@ body{
 }
 .error{
     color: red;
-    size: 12px;
+    size: 10px;
     margin-block:0.5rem;
+}
+.error-hide{
+    display: none;
 }
 .task-container{
     background-color: white;
@@ -66,16 +69,20 @@ body{
     border: 1px solid  #858585;
     border-radius: 14px;
 }
-#task{
+.task{
     border: none;
+    outline: none;
     padding-left: 1rem;
     width: 100%;
     height: 80px;
     font-weight: 600;
 }
-::placeholder{
+.task::placeholder{
     color:#D9D9D9;
     font-weight: 400;
+}
+.ellipse:hover{
+  cursor: pointer;
 }
 .footer-para{
     text-align: center;
