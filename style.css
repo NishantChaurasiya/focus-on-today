@@ -14,17 +14,22 @@ body{
     text-align: center;
     color:rgb(72,163,0);
     margin-block: 1rem;
+    text-shadow: 1px -2px 2px black;
 }
 .title span{
     color:rgb(97,72,28);
 }
 .app-container{
-    background-color:#FBFBFB ;
+    position: relative;
+    background-color:black ;
     margin-inline: auto;
     padding: 2rem;
     max-width: 650px;
-    box-shadow:1px -1px 3px 0px black;;
-
+    border-radius: 14px;
+    border: 5px solid red;
+}
+.day{
+    color: white;
 }
 .sub-title{
     display: flex;
@@ -34,6 +39,18 @@ body{
 .sun-icon{
     margin-top: -5px;
     padding-inline:0.5rem;
+    transform: rotate(360deg);
+    position: absolute;
+    right: 475px;
+    animation: myfirst 3.5s infinite linear;
+}
+@keyframes myfirst{
+    0%{
+        transform: rotate(0deg);left:30%;
+    }
+    100%{
+        transform: rotate(360deg);left:60%;
+    }
 }
 .para{
     color: #858585 ;
@@ -41,34 +58,37 @@ body{
 }
 .progress-bar{
     height: 30px;
-    background-color: #E9F2E2 ;
+    background-color:white;
     margin-block:1rem;
     border-radius: 14px;
+ 
 }
 .progress-value{
-    width:0%;
+    width:30%;
     height: 30px;
     background-color:#48A300 ;
     margin-block:0.5rem;
     border-radius: 14px;
+    border: 2px solid red;
 }
 .error{
     color: red;
     font-size: 12px;
     margin-block:0.5rem;
 }
-.error-hide{
+.hide{
     display: none;
 }
 .task-container{
-    background-color: white;
+    background-color: rgb(32,38,43);
     display: flex;
     margin-block: 1rem;
-    /* padding-block:2rem; */
     padding-inline: 1rem;
     align-items: center;
-    border: 1px solid  #858585;
+    border: 2px solid  red;
     border-radius: 14px;
+   
+
 }
 .task{
     border: none;
@@ -77,15 +97,25 @@ body{
     width: 100%;
     height: 80px;
     font-weight: 600;
+    color: white;
+    background-color: rgb(32,38,43);
+ 
 }
 .task::placeholder{
-    color:#D9D9D9;
+    color: #ff9d00;
     font-weight: 400;
+}
+.ellipse{
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ff9d00 ;
+    border-radius: 50%;
 }
 .ellipse:hover{
   cursor: pointer;
 }
 .footer-para{
+    color: white;
     text-align: center;
     font-weight: 700;
     margin-top: 2rem;
@@ -94,4 +124,17 @@ body{
     text-align: center;
     margin-top: 1.5rem;
     font-size: 10px;
+    color: white;
+}
+.completed .ellipse{
+    background-image: url(checkbox.svg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    border-color: #48A300;
+    position:relative;
+    background-color: #48A300;
+}
+.completed .task{
+    color: #48A300;
+    text-decoration: line-through;
 }
