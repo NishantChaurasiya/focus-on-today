@@ -57,21 +57,25 @@ body{
     font-size: 12px;
 }
 .progress-bar{
-    height: 30px;
+    height: 35px;
     background-color:white;
     margin-block:1rem;
     border-radius: 14px;
  
 }
 .progress-value{
-    width:30%;
-    height: 30px;
+    width:0%;
+    height:100%;
     background-color:#48A300 ;
     margin-block:0.5rem;
     border-radius: 14px;
-    border: 2px solid red;
-    transition: width 0.2sec ease-in-out;
+    color: white;
+    font-size: 10px;
+    padding-left: 1rem;
+    padding-top: 7px;
+    transition: width 0.2s ease-in-out;
 }
+
 .error{
     color: red;
     font-size: 12px;
@@ -139,3 +143,6 @@ body{
     color: #48A300;
     text-decoration: line-through;
 }
+/* .popup{
+
+} */

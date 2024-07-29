@@ -1,14 +1,35 @@
 const checkboxes=document.querySelectorAll(".ellipse");
 const progressValue=document.querySelector(".progress-value");
 const  inputs=document.querySelectorAll(".task");
+const msg=document.querySelector(".para")
 const error=document.querySelector(".error");
-const images=document.querySelectorAll(".checkbox");
-
-const allGoals= JSON.parse(localStorage.getItem("allGoals"))||{};
-
+const allQuotes=[
+  "Raise the bar by completing your goals!",
+ "Well begun is half done!",
+ "Just a step away, keep going!",
+ "Whoa! You just completed all the goals, time for chill",
+];
+const allGoals= JSON.parse(localStorage.getItem("allGoals"))||{
+  first:{
+    name:"",
+    completed:false,
+  },
+  second:{
+    name:"",
+    completed:false,
+  },
+  third:{
+    name:"",
+    completed:false,
+  },
+};
 let completedGoalsCount = Object.values(allGoals).filter((goal) => goal.completed).length;
-
-
+progressValue.style.width=`${completedGoalsCount/3*100}%`;
+progressValue.innerText=`${completedGoalsCount}/3 completed`;
+msg.innerText=allQuotes[completedGoalsCount];
+// if(progressValue.style.width=="100%"){
+//   localStorage.removeItem("allGoals");
+// };
 checkboxes.forEach((checkbox)=>{
 
   checkbox.addEventListener("click",()=>{
@@ -21,9 +42,8 @@ checkboxes.forEach((checkbox)=>{
      allGoals[inputId].completed=!allGoals[inputId].completed;
      completedGoalsCount = Object.values(allGoals).filter((goal) => goal.completed).length;
      progressValue.style.width=`${completedGoalsCount/3*100}%`;
-    //  if(progressValue.style.width=="100%"){
-    //       console.log("hye");
-    //  }
+     progressValue.innerText=`${completedGoalsCount}/3 completed`;
+     msg.innerText=allQuotes[completedGoalsCount];
      localStorage.setItem("allGoals",JSON.stringify(allGoals));
     }else{
      error.classList.remove("hide");
@@ -44,6 +64,10 @@ checkboxes.forEach((checkbox)=>{
       error.classList.add("hide");
     });
     input.addEventListener('input',(e)=>{
+      if(allGoals[input.id].completed){
+        input.value=allGoals[input.id].name;
+        return
+      };
       allGoals[input.id]={
         name:input.value,
         completed:false
