@@ -70,6 +70,7 @@ body{
     margin-block:0.5rem;
     border-radius: 14px;
     border: 2px solid red;
+    transition: width 0.2sec ease-in-out;
 }
 .error{
     color: red;
