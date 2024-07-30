@@ -1,7 +1,8 @@
 const checkboxes=document.querySelectorAll(".ellipse");
 const progressValue=document.querySelector(".progress-value");
 const  inputs=document.querySelectorAll(".task");
-const msg=document.querySelector(".para")
+const popup=document.querySelector(".popup");
+const msg=document.querySelector(".para");
 const error=document.querySelector(".error");
 const allQuotes=[
   "Raise the bar by completing your goals!",
@@ -27,9 +28,7 @@ let completedGoalsCount = Object.values(allGoals).filter((goal) => goal.complete
 progressValue.style.width=`${completedGoalsCount/3*100}%`;
 progressValue.innerText=`${completedGoalsCount}/3 completed`;
 msg.innerText=allQuotes[completedGoalsCount];
-// if(progressValue.style.width=="100%"){
-//   localStorage.removeItem("allGoals");
-// };
+
 checkboxes.forEach((checkbox)=>{
 
   checkbox.addEventListener("click",()=>{
@@ -44,7 +43,7 @@ checkboxes.forEach((checkbox)=>{
      progressValue.style.width=`${completedGoalsCount/3*100}%`;
      progressValue.innerText=`${completedGoalsCount}/3 completed`;
      msg.innerText=allQuotes[completedGoalsCount];
-     localStorage.setItem("allGoals",JSON.stringify(allGoals));
+      localStorage.setItem("allGoals",JSON.stringify(allGoals));
     }else{
      error.classList.remove("hide");
     };
@@ -67,7 +66,7 @@ checkboxes.forEach((checkbox)=>{
       if(allGoals[input.id].completed){
         input.value=allGoals[input.id].name;
         return
-      };
+      }
       allGoals[input.id]={
         name:input.value,
         completed:false
@@ -76,3 +75,4 @@ checkboxes.forEach((checkbox)=>{
     });
   });
  });
+

@@ -6,14 +6,16 @@
 }
 body{
     background-color: #F2F9ED ;
-    padding-inline:1rem;
-    margin-bottom: 2rem;
 
+}
+main{
+    margin-top:1rem ;
+    margin-inline: 1rem;
 }
 .title{
     text-align: center;
     color:rgb(72,163,0);
-    margin-block: 1rem;
+    margin-bottom: 1rem;
     text-shadow: 1px -2px 2px black;
 }
 .title span{
@@ -143,6 +145,3 @@ body{
     color: #48A300;
     text-decoration: line-through;
 }
-/* .popup{
-
-} */
