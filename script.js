@@ -1,4 +1,5 @@
 const checkboxes=document.querySelectorAll(".ellipse");
+const btn=document.querySelector(".btn")
 const progressValue=document.querySelector(".progress-value");
 const  inputs=document.querySelectorAll(".task");
 const popup=document.querySelector(".popup");
@@ -8,7 +9,7 @@ const allQuotes=[
   "Raise the bar by completing your goals!",
  "Well begun is half done!",
  "Just a step away, keep going!",
- "Whoa! You just completed all the goals, time for chill",
+ "Hurrah,all goals are completed, Click on New Goals button ",
 ];
 const allGoals= JSON.parse(localStorage.getItem("allGoals"))||{
   first:{
@@ -74,5 +75,9 @@ checkboxes.forEach((checkbox)=>{
       localStorage.setItem("allGoals",JSON.stringify(allGoals));
     });
   });
+ });
+ btn.addEventListener("click",()=>{
+  localStorage.clear();
+  window.location.reload();
  });
 

@@ -9,7 +9,7 @@ body{
 
 }
 main{
-    margin-top:1rem ;
+    
     margin-inline: 1rem;
 }
 .title{
@@ -25,7 +25,7 @@ main{
     position: relative;
     background-color:black ;
     margin-inline: auto;
-    padding: 2rem;
+    padding: 1rem;
     max-width: 650px;
     border-radius: 14px;
     border: 5px solid red;
@@ -55,8 +55,8 @@ main{
     }
 }
 .para{
-    color: #858585 ;
-    font-size: 12px;
+    color: green ;
+    font-size: 20px;
 }
 .progress-bar{
     height: 35px;
@@ -144,4 +144,19 @@ main{
 .completed .task{
     color: #48A300;
     text-decoration: line-through;
+}
+.btn{
+    background-color:#48A300;
+    color:white;
+    border:2px solid red;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor:pointer;
+
+}
+.button-section{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
